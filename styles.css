@@ -1,0 +1,652 @@
+
+@font-face {
+    font-family: ReadexPro;
+    src: url(/assets/fonts/ReadexPro.ttf);
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    overflow-x: none;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-family: "ReadexPro";
+    font-size: 4.5rem;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+}
+
+h2 {
+    font-family: "ReadexPro";
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+}
+
+h3 {
+    font-family: "ReadexPro";
+    font-size: 2rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+}
+
+h4 {
+    font-family: "ReadexPro";
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: 0.05rem;
+}
+
+p {
+    font-family: "ReadexPro";
+    font-size: 1.25rem;
+    font-weight: 100;
+}
+
+a {
+    display: inline-block;
+
+    font-family: "ReadexPro";
+    font-size: 1.25rem;
+    font-weight: 100;
+
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+
+/* ------------------------------------------------------------------------------------- */
+/* Structure & Layout *//* ------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------- */
+
+
+.header {
+    position: absolute;
+    top: 0;
+    
+    height: 75px;
+    width: 100%;
+
+    background-color: #ffffff;
+
+    z-index: 99999999;
+}
+
+.logo {
+    color: #1d2149;
+    font-size: 1.15rem;
+    font-weight: 100;
+    height: 100%;
+    padding: 15px 25px;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+    color: #1d2149;
+    font-size: 1.15rem;
+    font-weight: 100;
+    height: 100%;
+    padding: 25px 28px;
+    margin: 0;
+    margin-right: -4px;
+    transition: all 100ms ease;
+    vertical-align: top;
+}
+
+.nav-item:hover {
+    background-color: #e9faef;
+}
+
+.banner {
+    position: relative;
+
+    height: 850px;
+    width: 100%;
+
+    background-color: #2eb875;
+
+    z-index: 10;
+}
+
+.banner h1, h2, h3, p, a {
+    color: #ffffff;
+}
+
+.banner-img-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+
+    height: 100%;
+    width: 100%;
+    max-width: 1600px;
+}
+
+.container {
+    position: relative;
+    margin: auto;
+
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.post {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+
+    min-width: 250px;
+    max-width: 600px;
+
+    z-index: 1;
+}
+
+.banner .post {
+    top: 50%;
+    transform: translateY(-60%);
+    height: 50%;
+}
+
+.banner-background {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+
+    width: 45%;
+    max-width: 700px;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url(/assets/images/banner-picture.png);
+}
+
+.download-app {
+    position: relative;
+    display: inline-block;
+    margin-right: 14px;
+
+    background-size: cover;
+}
+
+.download-app:nth-of-type(1) {
+    background-image: url(/assets/images/ios-app.png);
+
+    height: 48px;
+    width: 157.79px;
+}
+
+.download-app:nth-of-type(2) {
+    background-image: url(/assets/images/android-app.png);
+
+    height: 50px;
+    width: 157.79px;
+}
+
+.download-app::after {
+    content: '';
+
+    position: absolute;
+    display: inline-block;
+    top: 5%;
+    left: 5%;
+
+    height: 90%;
+    width: 90%;
+
+    background-color: #ffffff;
+    
+    border-radius: 15rem;
+
+    z-index: -1;
+}
+
+.section-small {
+    position: relative;
+
+    height: 225px;
+    width: 100%;
+
+}
+
+.section-medium {
+    position: relative;
+
+    width: 100%;
+    height: 450px;
+}
+
+.section-medium-small {
+    position: relative;
+
+    width: 100%;
+    height: 350px;
+}
+
+.blue-bg {
+    background-color: #4f5cd1;
+}
+
+.green-tr-bg {
+    background-color: #d9fde5;
+}
+
+.green-bg {
+    background-color: #2eb875;
+}
+
+.light-bg {
+    background-color: #fdfdfd;
+}
+
+.bg-circle-big {
+    position: absolute;
+    top: -250px;
+    left: 40%;
+    transform: translateX(-60%);
+
+    height: 740px;
+    width: 740px;
+
+    background-color: #6675ff;
+
+    border-radius: 50%;
+}
+
+.bg-circle-small {
+    position: absolute;
+    top: -150px;
+    right: 20%;
+    transform: translateX(50%);
+
+    height: 200px;
+    width: 200px;
+
+    background-color: #6675ff;
+
+    border-radius: 50%;
+}
+
+.box {
+    position: relative;
+    display: inline-block;
+    padding: 2.5rem 1rem;
+    margin: 1.25rem;
+
+    height: 100%;
+    min-width: 250px;
+
+    text-align: left;
+    z-index: 1;
+
+    vertical-align: top;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 0.95rem 2.3rem;
+    
+    font-weight: 700;
+    font-size: 1.05rem;
+
+    background-color: #ffffff;
+    color: #1d2149;
+    
+    border-radius: 7.5rem;
+
+    transition: all 250ms ease;
+
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 7.5rem;
+    background-color: #6675ff;
+    opacity: 0;
+
+    transition: all 250ms ease;
+}
+
+.button:hover:after {
+    opacity: 0.35;
+}
+
+.section-small .container {
+    text-align: center;
+}
+
+.section-small .box .button {
+    margin: 18px;
+}
+
+.section-large {
+    position: relative;
+
+    width: 100%;
+    height: 600px;
+}
+
+.section-large .container {
+    max-width: 1400px;
+    text-align: center;
+}
+
+.visible-on-phone {
+    display: none;
+}
+
+.cover-image {
+    position: absolute;
+    top: -250px;
+    right: 5%;
+    background-image: url(/assets/images/index-phone-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 750px;
+    width: 600px;
+}
+
+.usp-post {
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    padding: 2rem;
+    margin: 50px auto;
+    max-width: 400px;
+    width: 30%;
+    min-width: 250px;
+    vertical-align: top;
+}
+
+.usp-post h3, .usp-post h4 {
+    color: #1d2149;
+}
+
+.usp-post p, .green-tr-bg p {
+    color: #878a9e;
+}
+
+.fa-code {
+    font-size: 110px;
+    color: #4f5cd1;
+}
+
+.fa-object-group {
+    font-size: 110px;
+    color: #2eb875;
+}
+
+.fa-poll {
+    font-size: 110px;
+    color: #d4d4d4;
+}
+
+.fa-circle {
+    font-size: 45px;
+    color: #c3f8d4;
+}
+
+i {
+    margin-bottom: 30px;
+}
+
+.green-tr-bg h2 {
+    color: #1d2149;
+}
+
+.section-medium .container {
+    max-width: 1450px;
+}
+
+.section-medium .container .box {
+    width: 45%;
+    margin-top: 80px;
+}
+
+.green-bg .container, .light-bg .container {
+    text-align: center;
+}
+
+.article {
+    position: relative;
+    display: inline-block;
+    margin: 100px auto;
+    text-align: center;
+    width: 50%;
+    min-width: 250px;
+}
+
+.article p a {
+    text-decoration: underline;
+}
+
+.article p a:hover {
+    color: #c3f8d4;
+}
+
+.footer {
+    position: relative;
+
+    height: 600px;
+    width: 100%;
+
+    background-color: #fdfdfd;
+}
+
+.footer h1 {
+    color: #1d2149;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+.footer p {
+    color: #1d2149;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1035px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    p {
+        font-size: 1.15rem;
+    }
+
+    .banner {
+        height: 800px;
+    }
+
+    .banner .container {
+        height: 500px
+    }
+
+    .banner-img-container {
+        position: relative;
+        display: inline-block;
+        height: 300px;
+        width: 100%;
+    }
+
+    .banner-background {
+        width: 100%;
+        max-width: none;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .burger-menu {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    #bp-960 {
+        height: unset;
+        height: 400px;
+        top: -100px;
+        margin-bottom: -100px;
+    }
+
+    #bp-960 .box {
+        position: absolute;
+        height: 100px;
+        text-align: left;
+        max-width: none;
+        width: 80%;
+        padding-left: 20px;
+    }
+
+    .cover-image {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 757px) {
+    .usp-post {
+        position: relative;
+        display: block;
+        width: 90%;
+        max-width: none;
+        height: 120px;
+    }
+
+    .usp-post h3 {
+        font-size: 1.5rem;
+    }
+
+    .usp-post p {
+        font-size: 1.15rem;
+    }
+
+    .mobile-text-container {
+        display: inline-block;
+        margin-left: 70px;
+        min-width: 180px;
+        width: 70%;
+    }
+
+    .fa-code {
+        position: absolute;
+        left: 0;
+        font-size: 60px;
+    }
+    
+    .fa-object-group {
+        position: absolute;
+        left: 0;
+        font-size: 60px;
+    }
+    
+    .fa-poll {
+        position: absolute;
+        left: 0;
+        font-size: 60px;
+    }
+
+    .fa-circle {
+        position: absolute;
+        left: 0;
+        font-size: 45px;
+    }
+
+    #bp-757 {
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 736px) {
+    .hidden-on-phone {
+        display: none;
+    }
+
+    .visible-on-phone {
+        display: inline-block;
+    }
+
+    .section-small {
+        height: 300px;
+        background-color: #6675ff;
+    }
+
+    .bg-circle-big, .bg-circle-small {
+        display: none;
+    }
+
+    .box {
+        text-align: center;
+    }
+
+    .banner .post {
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .banner {
+        height: 900px;
+    }
+
+    .banner .container {
+        height: 600px;
+    }
+
+    .download-app {
+        margin: -10px 10px;
+    }
+
+    .download-app:nth-of-type(1) {
+        background-image: url(/assets/images/ios-app-phone.png);
+        height: 50px;
+        width: 50px;
+    }
+
+    .download-app:nth-of-type(2) {
+        background-image: url(/assets/images/android-app-phone.png);
+        height: 50px;
+        width: 50px;
+    }
+}
